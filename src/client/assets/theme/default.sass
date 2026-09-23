@@ -1,9 +1,6 @@
 .theme-default
   --ui-text: #f1f1f1
 
-  .bg-card-box
-    background-color: rgba(255, 255, 255, 0.04) !important
-
   .bg-btn-2
     background: linear-gradient(180deg,#42443c,#191e1a) !important
     color: #f9eac4 
@@ -14,16 +11,18 @@
     
   .MenuItem
     &--Active
-      background-image: linear-gradient(135deg,#e6e6e6 0%,#bfc1c4 20%,#f8f8f8 40%,#9fa2a7 60%,#dcdcdc 80%,#8f9196 100%) !important
-      color: #000 !important
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.5),inset 0 -2px 25px rgba(0,0,0,0.35)
       .MenuItem__Icon
         color: #000 !important
       .MenuItem__Text
         color: #000 !important
 
   .bg-card
-    background: radial-gradient(circle at top, rgba(white, 0.02), rgba(black, .8)), linear-gradient(0deg, rgba(black, 0.1), rgba(black, 0)) #313638 !important
+    background: #000000 url('/images/tqc/bg.png') no-repeat !important
+    background-size: cover !important
+    // background: radial-gradient(circle at top, rgba(white, 0.02), rgba(black, .8)), linear-gradient(0deg, rgba(black, 0.1), rgba(black, 0)) #313638 !important
+  
+  .bg-card-box
+    background-color: rgba(255, 255, 255, 0.07) !important
 
 .hero
   position: relative

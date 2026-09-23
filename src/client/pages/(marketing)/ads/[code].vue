@@ -24,8 +24,6 @@
         <UiEffectOb v-if="tabItem == 1">
           <AuthSignLandingUp @done="toThank" :landing="landing._id"/>
         </UiEffectOb>
-        
-        <DataGiftcodePublic v-if="tabItem == 2" :landing="true" @landing="tabItem = 0"></DataGiftcodePublic>
       </div>
     </UModal>
   </div>
@@ -50,7 +48,6 @@ const tabItem = ref(1)
 const tabItems = [
   { label: t('signIn'), key: 'in' },
   { label: t('signUp'), key: 'up' },
-  { label: t('menuGiftcode'), key: 'giftcode' },
 ]
 
 const openSign = () => {

@@ -9,13 +9,7 @@
       </UiFlex>
 
       <div class="page-paper">
-        <UiText 
-          class="h-[300px] text-gray-400" 
-          align="center"
-          v-if="!news.content || news.content == '<p></p>'"
-        >
-          Không có dữ liệu bài viết
-        </UiText>
+        <DataEmpty class="h-[300px]" color="gray" v-if="!news.content || news.content == '<p></p>'"/>
         
         <UiEditorContent :content="news.content" v-else />
       </div>
