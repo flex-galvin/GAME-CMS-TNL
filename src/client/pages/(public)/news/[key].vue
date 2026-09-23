@@ -1,16 +1,17 @@
-<template>
-  <div>
+<template>  
+  <div class="tqc-container tqc-section-inner">
     <DataEmpty :loading="pending" :text="error || 'Bài viết không tồn tại'" class="min-h-[300px]" v-if="!!pending || !!error || !news"/>
 
-    <div class="page-shell">
-      <UiFlex type="col" items="center" justify="center" class="mb-10 gap-2">
-        <h1 id="page-heading">{{ news.title }}</h1>
-        <NuxtLink to="/" class="text-center text-sm text-yellow-800">Về Trang Chủ</NuxtLink>
-      </UiFlex>
+    <div v-else>
+      <div class="tqc-section-heading">
+        <div>
+          <div class="tqc-eyebrow">{{ news.description || 'Chiếu Chỉ Triều Đình - Bang Giao Thiên Hạ' }}</div>
+          <h2 class="tqc-title" id="generals-title">{{ news.title }}</h2>
+        </div>
+      </div>
 
-      <div class="page-paper">
-        <DataEmpty class="h-[300px]" color="gray" v-if="!news.content || news.content == '<p></p>'"/>
-        
+      <div class="tqc-section-content">
+        <DataEmpty class="h-[300px]" color="gray" text="Không có nội dung" v-if="!news.content || news.content == '<p></p>'"/>
         <UiEditorContent :content="news.content" v-else />
       </div>
     </div>

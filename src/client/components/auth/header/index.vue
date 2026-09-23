@@ -1,10 +1,10 @@
 <template>
   <UiFlex class="gap-1">
     <UPopover :ui="{wrapper: 'inline-flex'}" :popper="{ strategy: 'absolute', placement: 'bottom-end' }" v-model:open="open">
-      <UiFlex class="gap-1">
+      <UiFlex class="gap-4">
         <UiText class="text-main text-xs md:text-sm">
-          Xin chào, 
-          <span class="capitalize font-bold text-gradient-2 text-sm md:text-base">{{ authStore.profile?.username }}</span>
+          <span>Xin Chào</span>
+          <span class="tqc-text-main block uppercase font-bold text-sm md:text-base">{{ authStore.profile?.username }}</span>
         </UiText>
 
         <UiIcon class="text-main size-4 md:size-5" name="mdi:chevron-down"></UiIcon>

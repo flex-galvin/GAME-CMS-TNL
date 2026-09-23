@@ -1,6 +1,6 @@
 <template>
   <UiFlex class="select-none overflow-hidden">
-    <img :src="configStore.config.logo_long_image" class="h-[55px] w-auto 2xl:h-[150px]" v-if="!!configStore.config.logo_long_image" />
+    <img :src="configStore.config.logo_long_image" class="h-[55px]" v-if="!!configStore.config.logo_long_image" />
     
     <UiText weight="bold" class="text-2xl md:text-3xl" v-else>
       <span class="text-main">{{nameArr.fristWord}}</span>

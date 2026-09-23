@@ -1,11 +1,11 @@
 <template>
   <header class=" 
     w-full
-    flex items-start
-    p-4
+    flex items-center
+    py-2
     md:gap-1 gap-0.5
   ">
-    <NuxtLink to="/" class="-mt-4">
+    <NuxtLink to="/">
       <UiLogo/>
     </NuxtLink>
 

@@ -1,9 +1,5 @@
 <template>
   <div>
-    <div class="page-shell">
-      <h1 id="page-heading">...</h1>
-    </div>
-
     <UModal v-model="modal" preventClose :ui="{ width: 'sm:max-w-[700px]' }">
       <UiContent :title="t('menuPayment')" :sub="t('menuPaymentInfo')" class="bg-card rounded-2xl p-4">
         <template #more>
