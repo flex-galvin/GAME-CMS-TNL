@@ -850,9 +850,9 @@
   "limitedPayMyMoney": "Tích lũy nạp của tôi:",
   
   "osSelect": "Chọn hệ điều hành",
-  "osWeb": "Trình Duyệt Web",
-  "osAndroid": "Android",
-  "osIOS": "IOS",
+  "osWeb": "Chơi ngay trên trình duyệt",
+  "osAndroid": "Cài đặt máy Android",
+  "osIOS": "Cài đặt máy Iphone/Ipad",
   "osIOSInstall": "IPhone và IPad",
   "osIOSInstallInfo": "Hướng dẫn cài đặt trò chơi toàn màn hình",
   "osIOSInstallGuide1a": "1. Nhấn nút",

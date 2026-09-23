@@ -85,13 +85,13 @@ export default defineAppConfig({
     },
 
     notifications: {
-      position: 'right-0 top-0 bottom-auto',
+      position: 'left-1/2 translate-x-[-50%] top-0 bottom-auto',
       container: 'px-2 sm:px-2 py-2 sm:py-2 space-y-0.5',
     },
     
     notification: {
       background: 'bg-card',
-      title: 'text-sm font-semibold text-gradient FTV',
+      title: 'text-sm font-semibold text-gradient FTV hidden',
       description: 'dark:text-gray-200',
       rounded: 'rounded-2xl',
       ring: 'ring-0',
@@ -100,7 +100,7 @@ export default defineAppConfig({
         base: 'h-0.5'
       },
       icon: {
-        base: 'w-8 h-8'
+        base: 'w-6 h-6'
       }
     },
 

@@ -49,7 +49,6 @@
             w="1" h="1"
             alt="telegram"
             @click="open(configStore.config.social.telegram)"
-            v-if="configStore.config.social.telegram"
           ></UiImg>
 
           <UiImg 

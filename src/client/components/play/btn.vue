@@ -7,33 +7,23 @@
 
     <slot :open="open"></slot>
 
-    <UModal v-model="modal" preventClose :ui="{ width: 'sm:max-w-[400px]' }">
-      <UiContent 
-        :title="configStore.config.game.mobile ? t('downloadBtn') : t('playBtn')"
-        :sub="t('osSelect')" 
-        class="bg-card rounded-2xl p-4"
-      >
-        <template #more>
-          <UButton icon="i-bx-x" color="gray" class="ml-auto" size="2xs" square @click="modal = false"></UButton>
-        </template>
-
+    <UModal v-model="modal" :ui="{ width: 'sm:max-w-[420px]' }">
+      <div class="bg-card p-4 rounded-3xl">
         <UiFlex justify="center" class="bg-card-box cursor-pointer w-full rounded-2xl p-4 gap-2 mb-1" @click="playWeb()" v-if="!configStore.config.game.mobile">
           <UiIcon name="i-bx-world" size="8"></UiIcon>
-          <UiText weight="semibold" size="lg">{{ t('osWeb') }}</UiText>
+          <UiText weight="semibold" size="lg" class="w-full" align="end">{{ t('osWeb') }}</UiText>
         </UiFlex>
 
-        <UiFlex justify="between" wrap>
-          <UiFlex justify="center" class="bg-green-700/90 cursor-pointer w-[49%] rounded-2xl p-4 gap-2" @click="download(configStore.config.download.apk, 'android')">
-            <UiIcon name="i-bxl-android" size="8"></UiIcon>
-            <UiText weight="semibold" size="lg">{{ t('osAndroid') }}</UiText>
-          </UiFlex>
-
-          <UiFlex justify="center" class="bg-black/90 cursor-pointer w-[49%] rounded-2xl p-4 gap-2" @click="download(configStore.config.download.ios, 'ios')">
-            <UiIcon name="i-bxl-apple" size="8"></UiIcon>
-            <UiText weight="semibold" size="lg">{{ t('osIOS') }}</UiText>
-          </UiFlex>
+        <UiFlex justify="center" class="bg-green-700/20 cursor-pointer w-full rounded-2xl p-4 gap-2" @click="download(configStore.config.download.apk, 'android')">
+          <UiIcon name="i-bxl-android" size="8"></UiIcon>
+          <UiText weight="semibold" size="lg" class="w-full" align="end">{{ t('osAndroid') }}</UiText>
         </UiFlex>
-      </UiContent>
+
+        <UiFlex justify="center" class="bg-black/50 cursor-pointer w-full rounded-2xl p-4 gap-2" @click="download(configStore.config.download.ios, 'ios')">
+          <UiIcon name="i-bxl-apple" size="8"></UiIcon>
+          <UiText weight="semibold" size="lg" class="w-full" align="end">{{ t('osIOS') }}</UiText>
+        </UiFlex>
+      </div>
     </UModal>
 
     <UModal v-model="iosPWA" preventClose :ui="{ width: 'sm:max-w-[400px]' }">

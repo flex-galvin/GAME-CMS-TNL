@@ -7,7 +7,7 @@
       min-h-[calc(100%-var(--header-size))]
     ">
       <div class="
-        bg-card-box
+        bg-card-box backdrop-blur-2xl
         2xl:col-span-2 xl:col-span-3 col-span-12
         xl:block hidden
         xl:sticky xl:top-[var(--header-size)]
