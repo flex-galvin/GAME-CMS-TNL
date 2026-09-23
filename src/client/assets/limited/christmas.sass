@@ -1,0 +1,117 @@
+.color-christmas-light
+  --bg-light-color: 25 213 58
+  --bg-light-shadow-color: 8 77 20
+  
+.Christmas
+  position: relative
+  background: linear-gradient(180deg, #3e0000 0%, #780e0e 100%)
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.05))
+    z-index: 0
+    pointer-events: none
+    border-radius: inherit
+
+.christmas-text-banner
+  background: linear-gradient(45deg, #fff7a1 0%, #f5c542 50%, #fff7a1 100%)
+  text-shadow: 0 2px 8px rgba(255, 220, 150, 0.644)
+  background-clip: text !important
+  color: transparent !important
+  animation: christmas-flicker 2.4s ease-in-out infinite alternate
+
+.christmas-text-title
+  background: linear-gradient(45deg, #fff7a1 0%, #f5c542 50%, #fff7a1 100%)
+  text-shadow: 0 2px 8px rgba(255, 220, 150, 0.644)
+  background-clip: text !important
+  color: transparent !important
+
+.christmas-text
+  color: #fff7a1
+.christmas-text-2
+  color: #c10404
+.christmas-text-3
+  color: #007e15
+
+.christmas-ribbon
+  --s: 1.8em
+  --d: .4em
+  --c: .8em
+  padding: var(--d) calc(var(--s) + .5em) 0
+  line-height: 35px
+  background: conic-gradient(from  45deg at left  var(--s) top var(--d), #0008 12.5%,#0000 0 37.5%,#0004 0) 0  /50% 100% no-repeat, conic-gradient(from -45deg at right var(--s) top var(--d), #0004 62.5%,#0000 0 87.5%,#0008 0) 100%/50% 100% no-repeat
+  clip-path: polygon(0 0,calc(var(--s) + var(--d)) 0,calc(var(--s) + var(--d)) var(--d),calc(100% - var(--s) - var(--d)) var(--d),calc(100% - var(--s) - var(--d)) 0,100% 0, calc(100% - var(--c)) calc(50% - var(--d)/2),100% calc(100% - var(--d)),calc(100% - var(--s)) calc(100% - var(--d)),calc(100% - var(--s)) 100%,var(--s) 100%,var(--s) calc(100% - var(--d)),0 calc(100% - var(--d)),var(--c) calc(50% - var(--d)/2))
+  background-color: #007e15
+  width: fit-content
+
+.christmas-box
+  position: relative
+  background: #fff5e6ee
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35)
+  border: 5px solid transparent
+  background-image: repeating-linear-gradient(45deg,#007e15 0 10px, #fff5e6 10px 20px)
+  background-origin: border-box
+  background-clip: border-box
+.christmas-box-content
+  background: #fff5e6
+  border-radius: inherit
+
+.christmas-box-gift
+  background-color: rgba(146, 146, 146, 0.25)
+  box-shadow: 0 0 rgba(0, 0, 0, 0), 0 0 rgba(0, 0, 0, 0), 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)
+
+.christmas-btn
+  background: linear-gradient(180deg,#8d0303,#c41616) !important
+  color: #fff !important
+  cursor: pointer
+  border: none
+
+.christmas-btn-2
+  background: linear-gradient(180deg,#1c8d03,#16c430) !important
+  color: #fff !important
+  cursor: pointer
+  border: none
+
+.christmas-btn-3
+  background: linear-gradient(180deg, #ca5605, #ff6900) !important
+  color: #fff !important
+  cursor: pointer
+  border: none
+
+.christmas-bar
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.05))
+    background: #fff7a1
+    box-shadow: 0 18px 40px rgba(0,0,0,0.35)
+    border-radius: inherit
+    z-index: 0
+    transform-origin: center center
+    pointer-events: none
+    transform: scaleY(1.3) scaleX(1.01)
+
+  .christmas-process
+    position: absolute
+    left: 0
+    height: 100%
+    background-image: repeating-linear-gradient(135deg,#fc2f0b 0 10px, #ff7644 10px 20px)
+    background-origin: border-box
+    background-clip: border-box
+    border-radius: inherit
+    z-index: 1
+
+@keyframes christmas-flicker
+  0% 
+    filter: drop-shadow(0 0 6px rgba(255, 242, 0, 0.45))
+  100%
+    filter: drop-shadow(0 0 14px rgba(200, 255, 0, 0.7))

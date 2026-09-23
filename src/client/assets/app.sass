@@ -1,0 +1,57 @@
+@use "./font"
+@use "./animation"
+@use "./background"
+@use "./text"
+@use "./menu"
+@use "./editor"
+@use "./minigame"
+@use "./limited/halloween"
+@use "./limited/christmas"
+@use "./limited/monster"
+@use "./limited/lootchest"
+@use "./limited/shop"
+@use "./limited/pay"
+@use "./limited/lunarnewyear"
+@use "./other"
+@use "./theme/default"
+
+:root
+  --nav-size: 250px
+  --chat-size: 300px
+  --header-size: 3.5rem
+  --menu-top-size: 3.8rem
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  outline: none
+  -webkit-tap-highlight-color: transparent !important
+
+@media (hover: hover)
+  ::-webkit-scrollbar
+    height: 7px
+    width: 7px
+  ::-webkit-scrollbar-track
+    background-color: transparent
+  ::-webkit-scrollbar-thumb
+    background: rgba(0, 0, 0, 0.711)
+    border-radius: 6px
+
+html
+  font-size: 17px
+  scroll-behavior: smooth
+  
+html, body
+  margin: 0
+  padding: 0
+  min-height: 100%
+  height: 100%
+  color: var(--ui-text)
+
+body
+  -webkit-overflow-scrolling: touch
+
+#__nuxt
+  min-height: 100%
+  height: 100%

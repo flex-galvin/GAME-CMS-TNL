@@ -1,0 +1,63 @@
+.color-monster-light
+  --bg-light-color: 114 243 255
+  --bg-light-shadow-color: 19 145 148
+
+.Monster
+  position: relative
+  background: linear-gradient(180deg, #000000  0%, #04323d 100%)
+  border: 2px solid #21c0cf
+
+.monster-text
+  background: linear-gradient(90deg, rgb(114, 243, 255), rgb(95, 255, 207))
+  background-clip: text !important
+  color: transparent !important
+
+.monster-text-2
+  color: #72f3ff
+
+.monster-text-title
+  background: linear-gradient(90deg, #72f3ff, #5fffcf)
+  text-shadow: 0 0px 5px rgba(150, 255, 244, 0.644)
+  background-clip: text !important
+  color: transparent !important
+
+.monster-bar
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(90deg, #071022,#0b0b12)
+    box-shadow: 0 18px 40px rgba(0,0,0,0.35)
+    border-radius: inherit
+    z-index: 0
+    transform-origin: center center
+    pointer-events: none
+    transform: scaleY(1.3) scaleX(1.01)
+
+  .monster-process
+    position: absolute
+    left: 0
+    height: 100%
+    background: linear-gradient(90deg, #72f3ff, #5fffcf)
+    border-radius: inherit
+    z-index: 1
+
+.monster-box
+  background: #000000ab
+.monster-box-2
+  background: #000000e5
+
+.monster-btn
+  position: relative
+  background: #35353578
+  &--active
+    background: linear-gradient(90deg, #72f3ff, #5fffcf)
+    color: #000
+
+.monster-btn-2
+  background: linear-gradient(90deg, #72f3ff, #5fffcf)
+  color: #000

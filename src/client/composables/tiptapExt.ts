@@ -1,0 +1,6 @@
+export { Youtube as TiptapYoutube } from '@tiptap/extension-youtube'
+export { TextAlign as TiptapTextAlign } from '@tiptap/extension-text-align'
+export { Table as TiptapTable } from '@tiptap/extension-table'
+export { TableRow as TiptapTableRow } from '@tiptap/extension-table-row'
+export { TableCell as TiptapTableCell } from '@tiptap/extension-table-cell'
+export { TableHeader as TiptapTableHeader } from '@tiptap/extension-table-header'

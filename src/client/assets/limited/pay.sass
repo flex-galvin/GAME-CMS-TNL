@@ -1,0 +1,39 @@
+.color-pay-light
+  --bg-light-color: 116, 255, 143
+  --bg-light-shadow-color: 10 55 26
+
+.LimitedPay
+  position: relative
+  background: linear-gradient(180deg, #000000  0%, rgb(10, 55, 26) 100%)
+  backdrop-filter: 20px
+
+.limited-pay-text
+  background: linear-gradient(0deg, rgb(116, 255, 143), rgb(95, 227, 198))
+  background-clip: text !important
+  color: transparent !important
+
+.limited-pay-text-title
+  background: linear-gradient(0deg, rgb(116, 255, 143), rgb(95, 227, 198))
+  text-shadow: 0 0px 5px rgba(0, 255, 170, 0.644)
+  background-clip: text !important
+  color: transparent !important
+
+.limited-pay-text-2
+  color: rgb(116,255,143)
+
+.limited-pay-btn
+  background: linear-gradient(0deg, rgb(116, 255, 143), rgb(95, 227, 198))
+
+.limited-pay-ribbon
+  --f: .5em
+  --r: .8em
+  position: absolute
+  top: 5px
+  left: calc(-1*var(--f))
+  line-height: 1.8
+  background: linear-gradient(0deg, rgb(66, 188, 127), rgb(12, 69, 57))
+  border-bottom: var(--f) solid #0005
+  border-right: var(--r) solid #0000
+  clip-path: polygon(calc(100% - var(--r)) 0,0 0,0 calc(100% - var(--f)),var(--f) 100%, var(--f) calc(100% - var(--f)),calc(100% - var(--r)) calc(100% - var(--f)),100% calc(50% - var(--f)/2))
+  &--disabled
+    background: linear-gradient(0deg, rgb(77, 77, 77), rgb(59, 59, 59))

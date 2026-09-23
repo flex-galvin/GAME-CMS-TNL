@@ -1,0 +1,20 @@
+<template>
+	<UiEffectOb v-if="!!pack">
+		<UiFlex 
+			type="col" justify="center" 
+			class="relative h-[60px] max-h-[60px] md:h-[80px] md:max-h-[80px] cursor-pointer beat-anim " 
+			@click="configStore.setEventLimitedModal('shop', true)"
+		>
+			<img :src="`/images/limited/shop/chest.png`" class="h-[40px] md:h-[50px] w-[40px] md:w-[50px] z-[1]" />
+			<UiText class="text-[#f95848] FTV absolute bottom-[-5px] text-[0.6rem] sm:text-xs bg-card-box backdrop-blur rounded-2xl px-2 py-0.5 z-[1]" mini>
+				<UiCountdown :time="pack.time.end" />
+			</UiText>
+		</UiFlex>
+	</UiEffectOb>
+</template>
+
+<script setup>
+const configStore = useConfigStore()
+const eventData = computed(() => configStore.eventLimited.shop.data || [])
+const pack = computed(() => eventData.value[0])
+</script>

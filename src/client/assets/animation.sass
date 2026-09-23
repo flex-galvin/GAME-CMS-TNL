@@ -1,0 +1,46 @@
+.page-enter-active, .page-leave-active
+  transition: opacity 0.4s cubic-bezier(1, 0.5, 0.8, 1)
+.page-enter-from, .page-leave-to 
+  opacity: 0
+
+@keyframes jump
+  30%
+    transform: scale(1.2)
+  40%, 60%
+    transform: rotate(-20deg) scale(1.2)
+  50%
+    transform: rotate(20deg) scale(1.2)
+  70%
+    transform: rotate(0deg) scale(1.2)
+  100%
+    transform: scale(1)
+
+.jump-anim
+  animation: jump 1s ease infinite
+
+@keyframes bounce
+  from, to 
+    transform: scale(1, 1)
+  25%
+    transform: scale(0.9, 1.1)
+  50%
+    transform: scale(1.1, 0.9)
+  75%
+    transform: scale(0.95, 1.05)
+
+.bounce-anim
+  animation: bounce 1s infinite
+
+@keyframes beat
+  to
+    transform: scale(1.1)
+
+.beat-anim
+  animation: beat 1s infinite alternate
+
+@keyframes beat-2
+  50%
+    transform: scale(0.9) translateX(3px) translateY(3px)
+
+.beat-2-anim
+  animation: beat-2 1.5s infinite alternate
