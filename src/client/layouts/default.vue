@@ -25,7 +25,7 @@
               </template>
             </PlayBtn>
 
-            <NuxtLink to="/nap-tien" class="tqc-button">NẠP XU</NuxtLink>
+            <NuxtLink to="/payment" class="tqc-button">NẠP XU</NuxtLink>
           </div>
 
           <div class="tqc-text-note"><span aria-hidden="true"></span>Trí định thiên hạ · Nghĩa kết anh hùng</div>
@@ -39,39 +39,73 @@
       </div>
     </section>
 
+    <section class="tqc-community" id="cong-dong" aria-labelledby="community-title">
+      <div class="tqc-container py-6 lg:py-12">
+        <div>
+            <div class="tqc-eyebrow">Khám phá tính năng</div>
+            <p class="tqc-text tqc-text--compact">Đa dạng tính năng bổ trợ cho quá trình tung hoành thiên hạ.</p>
+        </div>
+
+        <div class="grid grid-cols-12 gap-2.5">
+          <NuxtLink class="tqc-card-link col-span-6 lg:col-span-3" to="/promo" aria-label="Truy cập trang Khuyến mãi của game">
+            <img src="/images/tqc/promo.png" width="1254" height="1254" alt="" loading="lazy">
+            <strong class="tqc-text-label">Khuyến Mãi</strong>
+            <span class="tqc-text-meta">Bấm để xem ↗</span>
+          </NuxtLink>
+          
+          <NuxtLink class="tqc-card-link col-span-6 lg:col-span-3" to="/giftcode" aria-label="Truy cập trang Giftcode của game">
+            <img src="/images/tqc/giftcode.png" width="1254" height="1254" alt="" loading="lazy">
+            <strong class="tqc-text-label">Giftcode</strong>
+            <span class="tqc-text-meta">Bấm để xem ↗</span>
+          </NuxtLink>
+          
+          <NuxtLink class="tqc-card-link col-span-6 lg:col-span-3" to="/event" aria-label="Truy cập trang Sự kiện của game">
+            <img src="/images/tqc/event.png" width="1254" height="1254" alt="" loading="lazy">
+            <strong class="tqc-text-label">Sự Kiện</strong>
+            <span class="tqc-text-meta">Bấm để xem ↗</span>
+          </NuxtLink>
+
+          <NuxtLink class="tqc-card-link col-span-6 lg:col-span-3" to="/shop" aria-label="Truy cập trang Cửa hàng của game">
+            <img src="/images/tqc/shop.png" width="1254" height="1254" alt="" loading="lazy">
+            <strong class="tqc-text-label">Cửa Hàng</strong>
+            <span class="tqc-text-meta">Bấm để xem ↗</span>
+          </NuxtLink>
+        </div>
+      </div>
+    </section>
+
     <section class="tqc-generals" id="page-main" aria-labelledby="generals-title">
       <slot></slot>
     </section>
 
     <section class="tqc-community" id="cong-dong" aria-labelledby="community-title">
-        <div class="tqc-container tqc-community-inner">
-          <div>
-              <div class="tqc-eyebrow">Tứ hải giai huynh đệ</div>
-              <h2 class="tqc-title" id="community-title">Có huynh đệ.<br>Có cả thiên hạ.</h2>
-              <p class="tqc-text tqc-text--compact">Kết giao đồng đội, cùng bàn chiến thuật và theo dõi tin tức từ cộng
-                đồng {{ configStore.config.name }}.</p>
-          </div>
+      <div class="tqc-container tqc-community-inner">
+        <div>
+            <div class="tqc-eyebrow">Tứ hải giai huynh đệ</div>
+            <p class="tqc-text tqc-text--compact">Kết giao đồng đội, cùng bàn chiến thuật và theo dõi tin tức từ cộng
+              đồng {{ configStore.config.name }}.</p>
+        </div>
 
-          <div class="tqc-card-grid">
-            <div class="tqc-card-link" @click="open(configStore.config.social.facebook)" aria-label="Truy cập Facebook của game">
-              <img src="/images/tqc/facebook.png" width="1254" height="1254" alt="" loading="lazy">
-              <strong class="tqc-text-label">Facebook</strong>
-              <span class="tqc-text-meta">THEO DÕI ↗</span>
-            </div>
-            
-            <NuxtLink class="tqc-card-link" @click="open(configStore.config.social.messenger)" aria-label="Truy cập Messenger của game">
-              <img src="/images/tqc/messenger.png" width="1254" height="1254" alt="" loading="lazy">
-              <strong class="tqc-text-label">Messenger</strong>
-              <span class="tqc-text-meta">KẾT NỐI ↗</span>
-            </NuxtLink>
-            
-            <NuxtLink class="tqc-card-link" @click="open(configStore.config.social.telegram)" aria-label="Truy cập Telegram của game">
-              <img src="/images/tqc/telegram.png" width="1254" height="1254" alt="" loading="lazy">
-              <strong class="tqc-text-label">Telegram</strong>
-              <span class="tqc-text-meta">GIA NHẬP ↗</span>
-            </NuxtLink>
+        <div class="tqc-card-grid">
+          <div class="tqc-card-link" @click="open(configStore.config.social.facebook)" aria-label="Truy cập Facebook của game">
+            <img src="/images/tqc/facebook.png" width="1254" height="1254" alt="" loading="lazy">
+            <strong class="tqc-text-label">Facebook</strong>
+            <span class="tqc-text-meta">THEO DÕI ↗</span>
+          </div>
+          
+          <NuxtLink class="tqc-card-link" @click="open(configStore.config.social.messenger)" aria-label="Truy cập Messenger của game">
+            <img src="/images/tqc/messenger.png" width="1254" height="1254" alt="" loading="lazy">
+            <strong class="tqc-text-label">Messenger</strong>
+            <span class="tqc-text-meta">KẾT NỐI ↗</span>
+          </NuxtLink>
+          
+          <NuxtLink class="tqc-card-link" @click="open(configStore.config.social.telegram)" aria-label="Truy cập Telegram của game">
+            <img src="/images/tqc/telegram.png" width="1254" height="1254" alt="" loading="lazy">
+            <strong class="tqc-text-label">Telegram</strong>
+            <span class="tqc-text-meta">GIA NHẬP ↗</span>
+          </NuxtLink>
         </div>
-        </div>
+      </div>
     </section>
    </main>
 </template>

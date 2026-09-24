@@ -3,14 +3,14 @@
     <div class="tqc-section-heading">
         <div>
           <div class="tqc-eyebrow">Chiếu Chỉ Triều Đình</div>
-          <h2 class="tqc-title" id="generals-title">Tin Tức</h2>
+          <p class="tqc-text tqc-text--compact">Cập nhật các tin tức mới nhất.</p>
         </div>
     </div>
 
-    <UiFlex type="col" class="tqc-section-content divide-y divide-[#c9a6671f] gap-6">
+    <div class="tqc-section-content grid grid-cols-12 gap-6">
       <NuxtLink 
         v-for="news in list" 
-        class="w-full cursor-pointer" 
+        class="col-span-12 md:col-span-6 cursor-pointer" 
         :to="`/news/${news.key}`"
       >
         <UiFlex class="gap-4" justify="between">
@@ -21,7 +21,7 @@
         </UiFlex>
         <UiText class="tqc-text-main text-base md:text-lg">{{ news.title }}</UiText>
       </NuxtLink>
-    </UiFlex>
+    </div>
   </div>
 </template>
 

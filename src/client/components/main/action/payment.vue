@@ -4,13 +4,7 @@
       <DataEmpty :text="t('functionMaintenance')" class="min-h-[300px]" :loading="loading.config" v-if="!!loading.config || !config || (!!config && !!config.maintenance)"></DataEmpty>
 
       <UForm v-else class="@3xl:col-span-8 col-span-12" ref="form" :state="state" :validate="validate" @submit="submit">
-        <UFormGroup label="Chọn kênh nạp" name="gate">
-          <SelectGate auto v-model="state.gate" v-model:gate="gateSelect" />
-        </UFormGroup>
-
-        <DataEmpty class="min-h-[300px]" v-if="!gateSelect"/>
-        
-        <div v-else>
+        <div v-if="!!gateSelect">
           <UiFlex type="col" class="mb-4 gap-1" v-if="!!happyhour || (!!savePayBonus && savePayBonus.number > 0)">
             <UAlert icon="i-bxs-gift" color="green" variant="outline" class="bg-card-box" v-if="(!!savePayBonus && savePayBonus.number > 0)">
               <template #description>
@@ -31,8 +25,15 @@
               </template>
             </UAlert>
           </UiFlex>
+        </div>
 
-          <!--Promo Input Shop-->
+        <UFormGroup label="Chọn hình thức" name="gate">
+          <SelectGate auto v-model="state.gate" v-model:gate="gateSelect" />
+        </UFormGroup>
+
+        <DataEmpty class="min-h-[300px]" v-if="!gateSelect"/>
+        
+        <div v-else>
           <UFormGroup :label="t('promo')" v-if="!!promo && promo.number > 0">
             <UInput :model-value="`+${promo.number}% ${promo.time}`" readonly />
           </UFormGroup>

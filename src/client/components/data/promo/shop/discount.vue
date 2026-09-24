@@ -1,15 +1,15 @@
 <template>
   <UiFlex 
     class="
-      bg-card-box
+      bg-card-box w-full
       rounded-2xl 
       gap-4 
       pl-4 pt-2
       cursor-pointer 
-      hover:scale-95 ease-in duration-200
       overflow-hidden
       h-[120px] min-h-[120px] max-h-[120px] 
       sm:h-[150px] sm:min-h-[150px] sm:max-h-[150px]
+      relative
     " 
     @click="navigateTo('/shop')"
   >

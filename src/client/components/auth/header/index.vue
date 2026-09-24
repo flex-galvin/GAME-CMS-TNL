@@ -2,12 +2,12 @@
   <UiFlex class="gap-1">
     <UPopover :ui="{wrapper: 'inline-flex'}" :popper="{ strategy: 'absolute', placement: 'bottom-end' }" v-model:open="open">
       <UiFlex class="gap-4">
-        <UiText class="text-main text-xs md:text-sm">
-          <span>Xin Chào</span>
-          <span class="tqc-text-main block uppercase font-bold text-sm md:text-base">{{ authStore.profile?.username }}</span>
+        <UiText class="text-xs md:text-sm">
+          <span class="text-gray-200">Xin Chào</span>
+          <span class="text-gradient block uppercase font-bold text-sm md:text-base">{{ authStore.profile?.username }}</span>
         </UiText>
 
-        <UiIcon class="text-main size-4 md:size-5" name="mdi:chevron-down"></UiIcon>
+        <UiIcon class="size-4 md:size-5" name="mdi:chevron-down"></UiIcon>
       </UiFlex>
       
 

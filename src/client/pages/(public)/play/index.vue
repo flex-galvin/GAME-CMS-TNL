@@ -14,9 +14,7 @@
     <UiFlex class="absolute top-2 right-2 gap-1" v-if="!!open">
       <UButton color="gray" icon="i-bx-x" square  @click="toggleMenu" size="lg"></UButton>
     </UiFlex>
-    
-    <!-- <UiIcon name="i-bx-x" class="absolute top-2 right-2 cursor-pointer" size="10" square @click="toggleMenu" v-if="!!open"></UiIcon> -->
-    
+
     <LayoutPlayMenu class="mt-12 sm:mt-0" :admin="admin" v-if="!!open"/>
     <LayoutPublicMenuMini v-if="!!open" />
   </UiFlex>

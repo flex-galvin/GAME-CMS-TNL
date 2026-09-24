@@ -1,6 +1,6 @@
 <template>
   <div>
-    <UModal v-model="modal" preventClose :ui="{ width: 'sm:max-w-[700px]' }">
+    <UModal v-model="modal" preventClose :ui="{ width: 'sm:max-w-[850px]' }">
       <UiContent :title="t('menuGiftcode')" :sub="t('menuGiftcodeInfo')" class="bg-card rounded-2xl p-4">
         <template #more>
           <UButton icon="i-bx-x" class="ml-auto" size="2xs" color="gray" square @click="navigateTo('/')"></UButton>

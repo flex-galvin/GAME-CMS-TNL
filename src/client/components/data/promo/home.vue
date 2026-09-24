@@ -1,37 +1,14 @@
 <template>
-  <div class="@container" v-if="!!active">
-    <UiTitle :name="t('promo')" icon="i-bx-party" class="mb-2" />
+  <div>
+    <DataEmpty text="Hiện chưa có khuyến mãi nào" class="min-h-[300px]" v-if="!active" />
 
-    <UiEffectOb>
-      <ClientOnly>
-        <swiper-container 
-          :slides-per-view="'auto'"
-          :loop="true"
-          :autoplay="{ delay: 3000, disableOnInteraction: false }" 
-          class="rounded-2xl overflow-hidden"
-        >
-          <swiper-slide class="@4xl:w-1/3 @lg:w-1/2 @sm:w-[60%] w-[70%] px-0.5" v-if="!!isActiveRegisterCoin">
-            <DataPromoRegisterCoin :data="promo.register.coin" />
-          </swiper-slide>
-
-          <swiper-slide class="@4xl:w-1/3 @lg:w-1/2 @sm:w-[60%] w-[70%] px-0.5" v-if="!!isActivePaymentFirst">
-            <DataPromoPaymentFrist :data="promo.payment.first" />
-          </swiper-slide>
-
-          <swiper-slide class="@4xl:w-1/3 @lg:w-1/2 @sm:w-[60%] w-[70%] px-0.5" v-if="!!isActivePaymentSecond">
-            <DataPromoPaymentSecond :data="promo.payment.second" />
-          </swiper-slide>
-
-          <swiper-slide class="@4xl:w-1/3 @lg:w-1/2 @sm:w-[60%] w-[70%] px-0.5" v-if="!!isActivePaymentHappyHour">
-            <DataPromoPaymentHappyhour :data="promo.payment.happyhour" />
-          </swiper-slide>
-
-          <swiper-slide class="@4xl:w-1/3 @lg:w-1/2 @sm:w-[60%] w-[70%] px-0.5" v-if="!!isActiveShopDiscount">
-            <DataPromoShopDiscount :data="promo.shop.discount.number" />
-          </swiper-slide>
-        </swiper-container >
-      </ClientOnly>
-    </UiEffectOb>
+    <UiFlex class="@container gap-1 overflow-hidden w-full" type="col" v-else >
+      <DataPromoRegisterCoin :data="promo.register.coin" v-if="!!isActiveRegisterCoin" />
+      <DataPromoPaymentFrist :data="promo.payment.first" v-if="!!isActivePaymentFirst" />
+      <DataPromoPaymentSecond :data="promo.payment.second" v-if="!!isActivePaymentSecond" /> 
+      <DataPromoPaymentHappyhour :data="promo.payment.happyhour" v-if="!!isActivePaymentHappyHour" />
+      <DataPromoShopDiscount :data="promo.shop.discount.number" v-if="!!isActiveShopDiscount" />
+    </UiFlex>
   </div>
 </template>
 
