@@ -20,6 +20,42 @@
   </UiFlex>
 
   <LayoutPlayOrientation />
+
+  <UModal v-model="modal.payment" preventClose :ui="{ width: 'sm:max-w-[700px]' }">
+    <PlayModal :title="t('menuPayment')" :sub="t('menuPaymentInfo')" @close="modal.payment = false">
+      <MainActionPayment />
+    </PlayModal>
+  </UModal>
+
+  <UModal v-model="modal.giftcode" preventClose :ui="{ width: 'sm:max-w-[700px]' }">
+    <PlayModal :title="t('menuGiftcode')" :sub="t('menuGiftcodeInfo')" @close="modal.giftcode = false">
+      <MainActionGiftcode />
+    </PlayModal>
+  </UModal>
+
+  <UModal v-model="modal.shop" preventClose :ui="{ width: 'sm:max-w-[700px]' }">
+    <PlayModal :title="t('menuShop')" :sub="t('menuShopInfo')"  @close="modal.shop = false">
+      <MainShop />
+    </PlayModal>
+  </UModal>
+
+  <UModal v-model="modal.event" preventClose :ui="{ width: 'sm:max-w-[700px]' }">
+    <PlayModal :title="t('menuEvent')" :sub="t('menuEventInfo')" @close="modal.event = false">
+      <MainEvent />
+    </PlayModal>
+  </UModal>
+
+  <UModal v-model="modal.minigame" preventClose :ui="{ width: 'sm:max-w-[700px]' }">
+    <PlayModal :title="t('menuMinigame')" :sub="t('menuMinigameInfo')" @close="modal.minigame = false">
+      <MainMinigame />
+    </PlayModal>
+  </UModal>
+
+  <UModal v-model="modal.rank" preventClose :ui="{ width: 'sm:max-w-[700px]' }">
+    <PlayModal :title="t('menuRank')" :sub="t('menuRankInfo')" @close="modal.rank = false">
+      <MainRank />
+    </PlayModal>
+  </UModal>
   
   <UModal v-model="fastRecharge.modal" prevent-close>
     <DataShopItemBuy :item="fastRecharge.item" :server="fastRecharge.server" @close="fastRecharge.modal = false" @done="onDoneRecharge" class="p-4" />
@@ -36,6 +72,7 @@ definePageMeta({
   middleware: 'play-guest'
 })
 
+const { t } = useI18n()
 const { $socket } = useNuxtApp()
 const route = useRoute()
 const configStore = useConfigStore()
@@ -46,6 +83,16 @@ const open = ref(false)
 const toggleMenu = () => {
   open.value = !open.value
 }
+
+// Modal Menu
+const modal = ref({
+  payment: false,
+  giftcode: false,
+  shop: false,
+  event: false,
+  minigame: false,
+  rank: false
+})
 
 // Recharge Game
 const fastRecharge = ref({
@@ -120,7 +167,16 @@ const onSDK = (e) => {
   const detail = e.data
   if(!detail) return
   
-  if(detail.type == 'OPEN-MENU') return toggleMenu()
+  if(detail.type == 'OPEN-MENU'){
+    if(!detail.target) return toggleMenu()
+    if(detail.target == 'MINIGAME') return modal.value.minigame = true
+    if(detail.target == 'PAYMENT') return modal.value.payment = true
+    if(detail.target == 'SHOP') return modal.value.shop = true
+    if(detail.target == 'EVENT') return modal.value.event = true
+    if(detail.target == 'RANK') return modal.value.rank = true
+    if(detail.target == 'GIFTCODE') return modal.value.giftcode = true
+  }
+
   if(detail.code || detail.type == 'code') return onFastGiftcode(detail)
   if((detail.item_id && detail.item_name && detail.price) || detail.type == 'recharge') return onFastRecharge(detail)
 }

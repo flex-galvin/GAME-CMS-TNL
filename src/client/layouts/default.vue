@@ -49,8 +49,8 @@
         <div class="grid grid-cols-12 gap-2.5">
           <NuxtLink class="tqc-card-link col-span-6 lg:col-span-3" to="/promo" aria-label="Truy cập trang Khuyến mãi của game">
             <img src="/images/tqc/promo.png" width="1254" height="1254" alt="" loading="lazy">
-            <strong class="tqc-text-label">KHUYẾN MÃI</strong>
-            <span class="tqc-text-meta">Bấm để xem ↗</span>
+            <strong class="tqc-text-label">HẠN THỜI</strong>
+            <span class="tqc-text-meta">Khuyến mãi, sự kiện giới hạn ↗</span>
           </NuxtLink>
           
           <NuxtLink class="tqc-card-link col-span-6 lg:col-span-3" to="/giftcode" aria-label="Truy cập trang Giftcode của game">
@@ -107,6 +107,9 @@
         </div>
       </div>
     </section>
+
+    <DataNotice />
+    <MainLimited />
    </main>
 </template>
 

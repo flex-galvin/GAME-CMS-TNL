@@ -3,7 +3,6 @@
     <UiContent 
       :title="notice.title || t('notice')" 
       :sub="notice.description || t('noticeFromSystem')" 
-      icon="i-mdi-loudspeaker" 
       class="bg-card p-4 rounded-2xl"
     >
       <template #more>

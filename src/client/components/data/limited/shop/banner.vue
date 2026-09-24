@@ -7,12 +7,12 @@
       gap-4 
       pr-1
       overflow-hidden
-      h-[120px] max:h-[120px]
+      h-[150px] max:h-[150px]
       cursor-pointer
     "
     @click="configStore.setEventLimitedModal('shop', true)"
   >
-    <img :src="`/images/limited/shop/chest.png`" class="absolute left-2 bottom-[-20px] h-[120px] w-auto z-[1] beat-2-anim" />
+    <img :src="`/images/limited/shop/chest.png`" class="absolute left-2 bottom-[-20px] h-[150px] w-auto z-[1] beat-2-anim" />
     
     <div class="grow z-[2] pl-[130px]">
       <UiFlex type="col" class="gap-1" items="center">

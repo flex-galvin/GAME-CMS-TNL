@@ -7,13 +7,13 @@
       gap-4 
       pr-1
       overflow-hidden
-      h-[120px] max:h-[120px]
+      h-[150px] max:h-[150px]
       cursor-pointer
     "
     @click="configStore.setEventLimitedModal('lootchest', true)"
   >
     <div class="grow z-[2] pl-[110px]">
-      <DotLottieVue autoplay loop mode="bounce" src="/animation/lootchest/chest.lottie" class="absolute h-[120px] left-[-60px] top-[0]" /> 
+      <DotLottieVue autoplay loop mode="bounce" src="/animation/lootchest/chest.lottie" class="absolute h-[150px] left-[-60px] top-[0]" /> 
 
       <UiFlex type="col" class="gap-1" items="center">
         <UiText class="FTV lootchest-text text-xl" align="center">{{ t('menuLimitedLootchest') }}</UiText>

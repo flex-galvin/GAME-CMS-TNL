@@ -5,12 +5,13 @@
       LunarBanner
       rounded-2xl 
       overflow-hidden
-      h-[120px] max:h-[120px]
+      w-full
+      h-[150px] max:h-[150px]
       cursor-pointer
     "
     @click="configStore.setEventLimitedModal('lunar', true)"
   >
-    <UiFlex class="z-[2] right-[12px] w-[128px] h-[43px] mt-1 absolute p-2" justify="center">
+    <UiFlex class="z-[2] right-[10px] w-[150px] h-[43px] mt-2 absolute p-2" justify="center">
       <UiText class="lunar-text-title FTV uppercase" mini align="center" v-if="!eventData.rewardTime" >
         <UiCountdown :time="eventData.time.end" />
       </UiText>

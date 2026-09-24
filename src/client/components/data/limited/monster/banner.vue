@@ -7,7 +7,7 @@
       gap-4 
       pr-1
       overflow-hidden
-      h-[120px] max:h-[120px]
+      h-[150px] max:h-[150px]
       cursor-pointer
     "
     @click="configStore.setEventLimitedModal('monster', true)"
