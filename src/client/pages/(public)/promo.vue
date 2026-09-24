@@ -1,6 +1,6 @@
 <template>
   <div>
-    <UModal v-model="modal" prevent-close  :ui="{ width: 'sm:max-w-[400px]' }">
+    <UModal v-model="modal" @close="navigateTo('/')" :ui="{ width: 'sm:max-w-[400px]' }">
       <UiContent title="Hạn Thời" sub="Các khuyến mãi và sự kiện có thời hạn" class="bg-card rounded-2xl p-4">
         <template #more>
           <UButton icon="i-bx-x" class="ml-auto" size="2xs" color="gray" square @click="navigateTo('/')"></UButton>
