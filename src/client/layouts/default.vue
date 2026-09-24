@@ -49,26 +49,26 @@
         <div class="grid grid-cols-12 gap-2.5">
           <NuxtLink class="tqc-card-link col-span-6 lg:col-span-3" to="/promo" aria-label="Truy cập trang Khuyến mãi của game">
             <img src="/images/tqc/promo.png" width="1254" height="1254" alt="" loading="lazy">
-            <strong class="tqc-text-label">Khuyến Mãi</strong>
+            <strong class="tqc-text-label">KHUYẾN MÃI</strong>
             <span class="tqc-text-meta">Bấm để xem ↗</span>
           </NuxtLink>
           
           <NuxtLink class="tqc-card-link col-span-6 lg:col-span-3" to="/giftcode" aria-label="Truy cập trang Giftcode của game">
             <img src="/images/tqc/giftcode.png" width="1254" height="1254" alt="" loading="lazy">
-            <strong class="tqc-text-label">Giftcode</strong>
-            <span class="tqc-text-meta">Bấm để xem ↗</span>
+            <strong class="tqc-text-label">GIFTCODE</strong>
+            <span class="tqc-text-meta">Nhập mã nhận quà ↗</span>
           </NuxtLink>
           
           <NuxtLink class="tqc-card-link col-span-6 lg:col-span-3" to="/event" aria-label="Truy cập trang Sự kiện của game">
             <img src="/images/tqc/event.png" width="1254" height="1254" alt="" loading="lazy">
-            <strong class="tqc-text-label">Sự Kiện</strong>
-            <span class="tqc-text-meta">Bấm để xem ↗</span>
+            <strong class="tqc-text-label">SỰ KIỆN</strong>
+            <span class="tqc-text-meta">Tích nạp, tích tiêu... ↗</span>
           </NuxtLink>
 
           <NuxtLink class="tqc-card-link col-span-6 lg:col-span-3" to="/shop" aria-label="Truy cập trang Cửa hàng của game">
             <img src="/images/tqc/shop.png" width="1254" height="1254" alt="" loading="lazy">
-            <strong class="tqc-text-label">Cửa Hàng</strong>
-            <span class="tqc-text-meta">Bấm để xem ↗</span>
+            <strong class="tqc-text-label">CỬA HÀNG</strong>
+            <span class="tqc-text-meta">Mua vật phẩm ↗</span>
           </NuxtLink>
         </div>
       </div>
