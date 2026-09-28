@@ -1,15 +1,34 @@
 <template>
-  <div>
-    <DataEmpty text="Hiện chưa có khuyến mãi nào" class="min-h-[300px]" v-if="!active" />
+	<UiEffectOb v-if="!!active">
+		<ClientOnly>
+			<swiper-container 
+				:slides-per-view="'auto'"
+				:loop="true"
+				:autoplay="{ delay: 2500, disableOnInteraction: false }" 
+				class="rounded-2xl overflow-hidden pt-0.5"
+			>
+				<swiper-slide class="w-full" v-if="!!isActiveRegisterCoin">
+					<DataPromoRegisterCoin :data="promo.register.coin" />
+				</swiper-slide>
 
-    <UiFlex class="@container gap-1 overflow-hidden w-full" type="col" v-else >
-      <DataPromoRegisterCoin :data="promo.register.coin" v-if="!!isActiveRegisterCoin" />
-      <DataPromoPaymentFrist :data="promo.payment.first" v-if="!!isActivePaymentFirst" />
-      <DataPromoPaymentSecond :data="promo.payment.second" v-if="!!isActivePaymentSecond" /> 
-      <DataPromoPaymentHappyhour :data="promo.payment.happyhour" v-if="!!isActivePaymentHappyHour" />
-      <DataPromoShopDiscount :data="promo.shop.discount.number" v-if="!!isActiveShopDiscount" />
-    </UiFlex>
-  </div>
+				<swiper-slide class="w-full" v-if="!!isActivePaymentFirst">
+					<DataPromoPaymentFrist :data="promo.payment.first" />
+				</swiper-slide>
+
+				<swiper-slide class="w-full" v-if="!!isActivePaymentSecond">
+        	<DataPromoPaymentSecond :data="promo.payment.second" /> 
+				</swiper-slide>
+
+				<swiper-slide class="w-full" v-if="!!isActivePaymentHappyHour">
+        	<DataPromoPaymentHappyhour :data="promo.payment.happyhour" />
+				</swiper-slide>
+
+				<swiper-slide class="w-full" v-if="!!isActiveShopDiscount">
+        	<DataPromoShopDiscount :data="promo.shop.discount.number" />
+				</swiper-slide>
+			</swiper-container>
+		</ClientOnly>
+	</UiEffectOb>
 </template>
 
 <script setup>

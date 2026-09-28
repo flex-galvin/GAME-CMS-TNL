@@ -4,10 +4,13 @@
     bg-card-box backdrop-blur-2xl
     px-4
   ">
-    <UiFlex class="h-[var(--header-size)] max-h-[var(--header-size)]">
-      <LayoutManageNavSlide class="mr-4" />
+    <UiFlex class="h-[var(--header-size)] max-h-[var(--header-size)] gap-1">
+      <UButton color="gray" icon="i-mdi-home" size="lg" square @click="navigateTo('/')" />
+      <LayoutManageNavSlide />
 
-      <UiText class="FTV text-gradient">Quản Trị Hệ Thống</UiText>
+      <UiFlex class="ml-auto">
+        <AuthHeader />
+      </UiFlex>
     </UiFlex>
   </header>
 </template>

@@ -7,24 +7,23 @@
       pl-4 pt-2
       cursor-pointer 
       overflow-hidden
-      h-[120px] min-h-[120px] max-h-[120px] 
-      sm:h-[150px] sm:min-h-[150px] sm:max-h-[150px]
+      h-[150px] min-h-[150px] max-h-[150px] 
       relative overflow-hidden
     " 
     @click="navigateTo('/payment')"
   >
-    <div class="grow z-[2] pr-[130px] sm:pr-[140px]">
+    <div class="grow z-[2] pr-[140px]">
       <UiFlex type="col" class="mb-2" items="start">
-        <UiText color="orange" class="text-sm sm:text-base md:text-lg line-clamp-1" weight="bold">
+        <UiText color="orange" class="text-lg line-clamp-1" weight="bold">
           {{ t('promoPaySecond') }}
         </UiText>
-        <UiText class="text-[0.65rem] sm:text-xs md:text-sm line-clamp-2">
+        <UiText class="text-[0.65rem] text-sm line-clamp-2">
           {{ t('promoPaySecondInfo') }}
         </UiText>
       </UiFlex>
 
       <UiFlex justify="center">
-        <UiText size="2xl" weight="bold" class="OPS bounce-anim uppercase text-lg sm:text-xl md:text-2xl" color="orange">
+        <UiText size="2xl" weight="bold" class="OPS bounce-anim uppercase text-2xl" color="orange">
           <UiNumber :num="data">
             <template #default="{ display }">
               {{ useMoney().toMoney(display) }}%

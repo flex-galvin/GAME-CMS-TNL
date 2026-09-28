@@ -12,8 +12,8 @@
     "
     @click="configStore.setEventLimitedModal('lootchest', true)"
   >
-    <div class="grow z-[2] pl-[110px]">
-      <DotLottieVue autoplay loop mode="bounce" src="/animation/lootchest/chest.lottie" class="absolute h-[150px] left-[-60px] top-[0]" /> 
+    <div class="grow z-[2] pl-[120px]">
+      <DotLottieVue autoplay loop mode="bounce" src="/animation/lootchest/chest.lottie" class="absolute h-[130px] left-[-50px] top-[10px]" /> 
 
       <UiFlex type="col" class="gap-1" items="center">
         <UiText class="FTV lootchest-text text-xl" align="center">{{ t('menuLimitedLootchest') }}</UiText>

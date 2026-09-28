@@ -1,6 +1,8 @@
 <template>
   <UiFlex>
-    <UButton color="gray" icon="i-bx-menu-alt-left" size="lg" square @click="open = true" />
+    <UButton color="gray" icon="i-bx-menu-alt-left" size="lg" square @click="open = true">
+      Menu
+    </UButton>
 
     <USlideover v-model="open" side="left" :ui="{
       width: 'w-screen max-w-xs'

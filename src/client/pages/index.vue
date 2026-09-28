@@ -11,7 +11,10 @@
       <NuxtLink 
         v-for="news in list" 
         class="col-span-12 md:col-span-6 cursor-pointer" 
-        :to="`/news/${news.key}`"
+        :to="{
+          path: `/news/${news.key}`,
+          hash: '#page-main'
+        }"
       >
         <UiFlex class="gap-4" justify="between">
           <UiText class="text-xs sm:text-sm italic">{{ useDayJs().displayTime(news.createdAt) }}</UiText>

@@ -8,17 +8,16 @@
       cursor-pointer 
       overflow-hidden
       h-[120px] min-h-[120px] max-h-[120px] 
-      sm:h-[150px] sm:min-h-[150px] sm:max-h-[150px]
       relative overflow-hidden
     " 
     @click="navigateTo('/payment')"
   >
     <div class="grow z-[2] pr-[130px] sm:pr-[140px]">
       <UiFlex type="col" class="mb-2" items="start">
-        <UiText color="red" class="text-sm sm:text-base md:text-lg line-clamp-1" weight="bold">
+        <UiText color="red" class="text-lg line-clamp-1" weight="bold">
           {{ t('promoPayHappyHour') }}
         </UiText>
-        <UiText class="text-[0.65rem] sm:text-xs md:text-sm line-clamp-2">
+        <UiText class="text-sm line-clamp-2">
           {{ t('promoPayHappyHourInfo', {
             start: data.start,
             end: data.end,
@@ -27,7 +26,7 @@
       </UiFlex>
 
       <UiFlex justify="center">
-        <UiText size="2xl" weight="bold" class="OPS bounce-anim uppercase text-lg sm:text-xl md:text-2xl" color="red">
+        <UiText size="2xl" weight="bold" class="OPS bounce-anim uppercase text-2xl" color="red">
           <UiNumber :num="data.number">
             <template #default="{ display }">
               {{ useMoney().miniMoney(display) }}%
