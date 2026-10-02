@@ -19,7 +19,7 @@
   }">
     <div class="bg-card">
       <UiFlex justify="center" class="w-full h-full">
-        <img :src="imgSelect.src" class="max-h-[90vh] w-auto object-contain rounded-md"/>
+        <img :src="`${imgSelect.src}?v=new" class="max-h-[90vh] w-auto object-contain rounded-md"/>
       </UiFlex>
 
       <UiFlex class="absolute -top-4 -right-4">

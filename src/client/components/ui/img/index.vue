@@ -7,7 +7,7 @@
     <img
       v-if="shouldLoad"
       class="object-cover w-full h-full select-none"
-      :src="imgSrc"
+      :src="`${imgSrc}?v=new`"
       :alt="alt"
       :loading="preload ? 'lazy' : undefined"
       :decoding="decoding"
