@@ -66,7 +66,7 @@ const typeFormat = {
 const imgSrc = (src, type) => {
   if(!!src){
     const imagePath = configStore.config.game.image
-    return !imagePath ? src : `${imagePath}/${src}`
+    return !imagePath ? `${src}?v=new` : `${imagePath}/${src}?v=new`
   }
   else {
     if(!!type) return `/images/icon/${typeFormat[type]}.png`
