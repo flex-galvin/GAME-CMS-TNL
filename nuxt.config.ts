@@ -83,7 +83,7 @@ export default defineNuxtConfig({
   i18n: {
     locales: [
       { code: 'vi', file: 'vi.json', name: 'Tiếng Việt' },
-      { code: 'en', file: 'en.json', name: 'English' },
+      // { code: 'en', file: 'en.json', name: 'English' },
       // { code: 'zh', file: 'zh.json', name: '中文' },
       // { code: 'ko', file: 'ko.json', name: '한국어' },
       // { code: 'ja', file: 'ja.json', name: '日本語' }
