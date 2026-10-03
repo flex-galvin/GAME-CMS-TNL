@@ -92,9 +92,9 @@ export default defineNuxtConfig({
     lazy: true,
     strategy: 'no_prefix',
     langDir: 'locales/',
-    experimental: {
-      localeDetector: 'localeDetector.ts'
-    },
+    // experimental: {
+    //   localeDetector: 'localeDetector.ts'
+    // },
     bundle: {
       optimizeTranslationDirective: false
     }
