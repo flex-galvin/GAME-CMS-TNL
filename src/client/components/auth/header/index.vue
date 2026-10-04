@@ -125,26 +125,26 @@ const menuUser = computed(() => {
       icon: 'i-bx-credit-card',
       click: () => { open.value = false, modal.value.history.payment = true }
     },
-    // {
-    //   label: t('menuShopHistory'),
-    //   icon: 'i-bx-cart',
-    //   click: () => { open.value = false, modal.value.history.shop = true }
-    // },
-    // {
-    //   label: t('menuGiftcodeHistory'),
-    //   icon: 'i-bx-barcode',
-    //   click: () => { open.value = false, modal.value.history.giftcode = true }
-    // },
-    // {
-    //   label: t('menuEventHistory'),
-    //   icon: 'i-mdi-event-star',
-    //   click: () => { open.value = false, modal.value.history.event = true }
-    // },
-    // {
-    //   label: t('menuMinigameHistory'),
-    //   icon: 'i-bx-game',
-    //   click: () => { open.value = false, modal.value.history.minigame = true }
-    // },
+    {
+      label: t('menuShopHistory'),
+      icon: 'i-bx-cart',
+      click: () => { open.value = false, modal.value.history.shop = true }
+    },
+    {
+      label: t('menuGiftcodeHistory'),
+      icon: 'i-bx-barcode',
+      click: () => { open.value = false, modal.value.history.giftcode = true }
+    },
+    {
+      label: t('menuEventHistory'),
+      icon: 'i-mdi-event-star',
+      click: () => { open.value = false, modal.value.history.event = true }
+    },
+    {
+      label: t('menuMinigameHistory'),
+      icon: 'i-bx-game',
+      click: () => { open.value = false, modal.value.history.minigame = true }
+    },
     {
       label: t('signOut'),
       icon: 'i-mdi-power',
