@@ -1,6 +1,6 @@
 <template>
   <header class=" 
-    w-full
+    w-full max-w-full
     flex items-center
     py-2
     md:gap-1 gap-0.5
@@ -9,8 +9,8 @@
       <UiLogo/>
     </NuxtLink>
 
-    <UiFlex class="ml-auto gap-1" v-if="!!authStore.isLogin">
-      <LazyAuthHeader  />
+    <UiFlex class="ml-auto gap-1">
+      <LazyAuthHeader v-if="!!authStore.isLogin" />
     </UiFlex>
   </header>
 </template>
