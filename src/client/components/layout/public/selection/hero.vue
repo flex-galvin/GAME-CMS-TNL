@@ -1,6 +1,6 @@
 <template>
   <section class="tqc-hero pt-10" id="trang-chu" aria-labelledby="hero-title">
-    <LayoutPublicHeader class="absolute tqc-container z-50 top-0 left-1/2 -translate-x-1/2" /> 
+    <LayoutPublicHeader class="absolute tqc-container z-50 top-0 inset-x-0 mx-auto" />
 
     <div class="tqc-hero-bg" aria-hidden="true"></div>
     <div class="tqc-embers" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>

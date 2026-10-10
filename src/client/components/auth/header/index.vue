@@ -1,13 +1,13 @@
 <template>
-  <UiFlex class="gap-1">
-    <UPopover :ui="{wrapper: 'inline-flex'}" :popper="{ strategy: 'absolute', placement: 'bottom-end' }" v-model:open="open">
-      <UiFlex class="gap-4">
-        <UiText class="text-xs md:text-sm">
+  <UiFlex class="min-w-0 max-w-full gap-1">
+    <UPopover :ui="{wrapper: 'inline-flex min-w-0 max-w-full', trigger: 'inline-flex min-w-0 w-full'}" :popper="{ strategy: 'absolute', placement: 'bottom-end' }" v-model:open="open">
+      <UiFlex class="min-w-0 max-w-full gap-2 md:gap-4">
+        <UiText class="min-w-0 text-xs md:text-sm">
           <span class="text-gray-200">Xin Chào</span>
-          <span class="text-gradient block uppercase font-bold text-sm md:text-base">{{ authStore.profile?.username }}</span>
+          <span class="text-gradient block truncate uppercase font-bold text-sm md:text-base" :title="authStore.profile?.username">{{ authStore.profile?.username }}</span>
         </UiText>
 
-        <UiIcon class="size-4 md:size-5" name="mdi:chevron-down"></UiIcon>
+        <UiIcon class="size-4 shrink-0 md:size-5" name="mdi:chevron-down"></UiIcon>
       </UiFlex>
       
 

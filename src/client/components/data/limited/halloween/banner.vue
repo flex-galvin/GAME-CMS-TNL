@@ -10,7 +10,7 @@
       h-[150px] max:h-[150px]
       cursor-pointer
     "
-    @click="configStore.setEventLimitedModal('halloween', true)"
+    @click="emit('select', 'halloween')"
   >
     <img :src="`/images/limited/halloween/pumpkin.png`" class="absolute left-[-40px] bottom-[-35px] h-[150px] w-auto z-[1] beat-2-anim" />
     
@@ -32,5 +32,6 @@
 <script setup>
 const { t } = useI18n()
 const configStore = useConfigStore()
+const emit = defineEmits(['select'])
 const eventData = computed(() => configStore.eventLimited.halloween.data)
 </script>

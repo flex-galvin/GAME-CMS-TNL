@@ -10,7 +10,7 @@
       h-[150px] max:h-[150px]
       cursor-pointer
     "
-    @click="configStore.setEventLimitedModal('monster', true)"
+    @click="emit('select', 'monster')"
   >
     <div class="grow z-[2] pl-[80px]">
       <DotLottieVue autoplay loop src="/animation/monster/monster-2.lottie" class="absolute h-[90px] left-[-38px] bottom-[5px]" /> 
@@ -33,5 +33,6 @@
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
 const { t } = useI18n()
 const configStore = useConfigStore()
+const emit = defineEmits(['select'])
 const eventData = computed(() => configStore.eventLimited.monster.data)
 </script>

@@ -10,7 +10,7 @@
       h-[150px] max:h-[150px]
       cursor-pointer
     "
-    @click="configStore.setEventLimitedModal('pay', true)"
+    @click="emit('select', 'pay')"
   >
     <div class="grow z-[2] pl-[80px]">
       <DotLottieVue autoplay loop src="/animation/pay/cash.lottie" class="absolute h-[90px] left-[-30px] bottom-[10px]" /> 
@@ -30,5 +30,6 @@
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
 const { t } = useI18n()
 const configStore = useConfigStore()
+const emit = defineEmits(['select'])
 const eventData = computed(() => configStore.eventLimited.pay.data)
 </script>

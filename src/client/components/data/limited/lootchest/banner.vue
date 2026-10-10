@@ -10,7 +10,7 @@
       h-[150px] max:h-[150px]
       cursor-pointer
     "
-    @click="configStore.setEventLimitedModal('lootchest', true)"
+    @click="emit('select', 'lootchest')"
   >
     <div class="grow z-[2] pl-[120px]">
       <DotLottieVue autoplay loop mode="bounce" src="/animation/lootchest/chest.lottie" class="absolute h-[130px] left-[-50px] top-[10px]" /> 
@@ -33,5 +33,6 @@
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
 const { t } = useI18n()
 const configStore = useConfigStore()
+const emit = defineEmits(['select'])
 const eventData = computed(() => configStore.eventLimited.lootchest.data)
 </script>

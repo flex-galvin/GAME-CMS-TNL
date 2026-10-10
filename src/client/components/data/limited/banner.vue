@@ -8,31 +8,31 @@
 				class="rounded-2xl overflow-hidden pt-0.5"
 			>
 				<swiper-slide class="w-full" v-if="!!eventPay">
-					<DataLimitedPayBanner />
+					<DataLimitedPayBanner @select="emit('select', $event)" />
 				</swiper-slide>
 
 				<swiper-slide class="w-full" v-if="!!eventShop">
-					<DataLimitedShopBanner />
+					<DataLimitedShopBanner @select="emit('select', $event)" />
 				</swiper-slide>
 
 				<swiper-slide class="w-full" v-if="!!eventHalloween">
-        	<DataLimitedHalloweenBanner />
+					<DataLimitedHalloweenBanner @select="emit('select', $event)" />
 				</swiper-slide>
 
 				<swiper-slide class="w-full" v-if="!!eventChristmas">
-        	<DataLimitedChristmasBanner />
+					<DataLimitedChristmasBanner @select="emit('select', $event)" />
 				</swiper-slide>
 
 				<swiper-slide class="w-full" v-if="!!eventMonster">
-        	<DataLimitedMonsterBanner />
+					<DataLimitedMonsterBanner @select="emit('select', $event)" />
 				</swiper-slide>
 
 				<swiper-slide class="w-full" v-if="!!eventLootchest">
-        	<DataLimitedLootchestBanner />
+					<DataLimitedLootchestBanner @select="emit('select', $event)" />
 				</swiper-slide>
 
 				<swiper-slide class="w-full" v-if="!!eventLunar">
-        	<DataLimitedLunarBanner />
+					<DataLimitedLunarBanner @select="emit('select', $event)" />
 				</swiper-slide>
 			</swiper-container>
 		</ClientOnly>
@@ -42,6 +42,7 @@
 
 <script setup>
 const configStore = useConfigStore()
+const emit = defineEmits(['select'])
 const eventShop = computed(() => configStore.eventLimited.shop.data)
 const eventPay = computed(() => configStore.eventLimited.pay.data)
 const eventHalloween = computed(() => configStore.eventLimited.halloween.data)

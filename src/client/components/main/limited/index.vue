@@ -1,11 +1,13 @@
 <template>
-  <MainLimitedPay />
-  <MainLimitedShop />
-  <MainLimitedHalloween />
-  <MainLimitedChristmas />
-  <MainLimitedMonster />
-  <MainLimitedLootchest />
-  <MainLimitedLunar />
+  <div class="w-[0] h-[0] hidden">
+    <MainLimitedPay />
+    <MainLimitedShop />
+    <MainLimitedHalloween />
+    <MainLimitedChristmas />
+    <MainLimitedMonster />
+    <MainLimitedLootchest />
+    <MainLimitedLunar />
+  </div>
 </template>
 
 <script setup>

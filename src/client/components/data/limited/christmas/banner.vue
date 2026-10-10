@@ -10,7 +10,7 @@
       h-[150px] max:h-[150px]
       cursor-pointer
     "
-    @click="configStore.setEventLimitedModal('christmas', true)"
+    @click="emit('select', 'christmas')"
   >
     <div class="flake" aria-hidden="true">❆</div>
     <div class="flake" aria-hidden="true">✻</div>
@@ -37,6 +37,7 @@
 <script setup>
 const { t } = useI18n()
 const configStore = useConfigStore()
+const emit = defineEmits(['select'])
 const eventData = computed(() => configStore.eventLimited.christmas.data)
 </script>
 

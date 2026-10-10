@@ -10,7 +10,7 @@
       h-[150px] max:h-[150px]
       cursor-pointer
     "
-    @click="configStore.setEventLimitedModal('shop', true)"
+    @click="emit('select', 'shop')"
   >
     <img :src="`/images/limited/shop/chest.png`" class="absolute left-2 bottom-[-20px] h-[150px] w-auto z-[1] beat-2-anim" />
     
@@ -28,6 +28,7 @@
 
 <script setup>
 const configStore = useConfigStore()
+const emit = defineEmits(['select'])
 const eventData = computed(() => configStore.eventLimited.shop.data || [])
 const pack = computed(() => eventData.value[0])
 </script>
